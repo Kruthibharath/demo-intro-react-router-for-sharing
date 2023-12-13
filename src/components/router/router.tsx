@@ -4,6 +4,7 @@ import Home from "../home/home";
 import Products from "../products/products";
 import About from "../about/about";
 import Help from "../help/help";
+import Product from "../products/product/product";
 
 export const Router: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const Router: React.FC = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/help" element={<Help />} />
       </Route>
